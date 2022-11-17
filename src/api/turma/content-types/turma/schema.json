@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "turmas",
+  "info": {
+    "singularName": "turma",
+    "pluralName": "turmas",
+    "displayName": "Turma",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codigo": {
+      "type": "string"
+    },
+    "periodo": {
+      "type": "string"
+    },
+    "alunos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::aluno.aluno",
+      "mappedBy": "turma"
+    },
+    "professor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::professor.professor",
+      "inversedBy": "turma"
+    },
+    "curso": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::curso.curso",
+      "inversedBy": "turma"
+    },
+    "ano": {
+      "type": "date"
+    }
+  }
+}

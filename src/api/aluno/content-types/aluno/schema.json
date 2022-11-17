@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alunos",
+  "info": {
+    "singularName": "aluno",
+    "pluralName": "alunos",
+    "displayName": "Aluno",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "ra": {
+      "type": "string",
+      "required": true
+    },
+    "telefone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "cpf": {
+      "type": "string",
+      "required": true
+    },
+    "turma": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::turma.turma",
+      "inversedBy": "alunos"
+    }
+  }
+}

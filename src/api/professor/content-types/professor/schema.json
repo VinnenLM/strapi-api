@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professors",
+  "info": {
+    "singularName": "professor",
+    "pluralName": "professors",
+    "displayName": "Professor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "cpf": {
+      "type": "string"
+    },
+    "telefone": {
+      "type": "string"
+    },
+    "departamento": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::departamento.departamento",
+      "inversedBy": "professores"
+    },
+    "email": {
+      "type": "email"
+    },
+    "turma": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::turma.turma",
+      "mappedBy": "professor"
+    }
+  }
+}

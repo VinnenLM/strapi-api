@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos",
+  "info": {
+    "singularName": "curso",
+    "pluralName": "cursos",
+    "displayName": "Curso",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "codigo": {
+      "type": "string"
+    },
+    "departamento": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::departamento.departamento",
+      "inversedBy": "cursos"
+    },
+    "turma": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::turma.turma",
+      "mappedBy": "curso"
+    }
+  }
+}

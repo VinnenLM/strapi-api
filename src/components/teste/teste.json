@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_teste_testes",
+  "info": {
+    "displayName": "Teste",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "teste": {
+      "type": "string"
+    },
+    "outroTeste": {
+      "type": "string"
+    },
+    "MaisUmTeste": {
+      "type": "string"
+    }
+  }
+}
